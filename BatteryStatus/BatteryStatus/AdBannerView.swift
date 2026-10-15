@@ -1,16 +1,14 @@
 import SwiftUI
 import GoogleMobileAds
 
-/// Ad unit IDs.
 /// While you build and test from Xcode (Debug), the app uses Google's TEST
 /// banner ID, so you never show or click real ads by accident.
-/// Replace the second ID with your own ad unit ID from AdMob before releasing.
-/// An AD UNIT ID contains a "/" (slash). An APP ID contains a "~" (tilde).
+/// An ad unit ID contains a "/" (slash); an app ID contains a "~" (tilde).
 enum AdConfig {
     #if DEBUG
-    static let bannerUnitID = "ca-app-pub-8986836930601743~4401239349"   // Google test banner
+    static let bannerUnitID = "ca-app-pub-3940256099942544/2934735716"   // Google test banner
     #else
-    static let bannerUnitID = "ca-app-pub-8986836930601743~4401239349"   // YOUR real banner ad unit ID
+    static let bannerUnitID = "ca-app-pub-8986836930601743/4401239349"
     #endif
 }
 
