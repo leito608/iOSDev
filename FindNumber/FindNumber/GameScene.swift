@@ -7,6 +7,7 @@
 
 import SpriteKit
 import UIKit
+import AVFoundation
 
 final class GameScene: SKScene {
     var onGameCompletionChanged: ((Bool) -> Void)?
@@ -33,10 +34,13 @@ final class GameScene: SKScene {
     private var isNewRecord = false
     private var hasAppeared = false
     private var safeAreaInsets = UIEdgeInsets.zero
+    private var soundPlayers: [String: AVAudioPlayer] = [:]
+    private var hasPreloadedSounds = false
 
     override func didMove(to view: SKView) {
         safeAreaInsets = view.safeAreaInsets
         hasAppeared = true
+        preloadSounds()
         showDimensionPicker()
     }
 
@@ -122,10 +126,12 @@ final class GameScene: SKScene {
         }
 
         guard number == nextNumber else {
+            playSound(named: "wrong-number.wav")
             flashIncorrectSelection(on: tile)
             return
         }
 
+        playSound(named: "number-click.wav")
         tile.removeAction(forKey: "incorrect")
         completedNumbers.insert(number)
         tile.fillColor = completedColor
@@ -188,15 +194,25 @@ final class GameScene: SKScene {
         let safeBottom = safeAreaInsets.bottom
         let availableHeight = max(0, safeTop - safeBottom)
         let centerY = safeBottom + availableHeight / 2
+        let titleFontSize = min(38, max(28, size.width * 0.09))
 
         let title = makeLabel(
             "Find Number",
             font: "AvenirNext-Bold",
-            size: min(38, max(28, size.width * 0.09)),
+            size: titleFontSize,
             color: .white
         )
         title.position = CGPoint(x: size.width / 2, y: centerY + min(150, availableHeight * 0.25))
         addChild(title)
+
+        let iconSize = min(80, max(56, availableHeight * 0.12))
+        let gameIcon = SKSpriteNode(imageNamed: "GameIcon")
+        gameIcon.size = CGSize(width: iconSize, height: iconSize)
+        gameIcon.position = CGPoint(
+            x: size.width / 2,
+            y: title.position.y + titleFontSize / 2 + 12 + iconSize / 2
+        )
+        addChild(gameIcon)
 
         let subtitle = makeLabel(
             "Choose a board size",
@@ -371,7 +387,7 @@ final class GameScene: SKScene {
         instructionBox.fillColor = SKColor(red: 0.08, green: 0.15, blue: 0.18, alpha: 1)
         instructionBox.strokeColor = SKColor(red: 0.16, green: 0.38, blue: 0.30, alpha: 1)
         instructionBox.lineWidth = 1
-        instructionBox.position = CGPoint(x: size.width / 2, y: instructionY)
+        instructionBox.position = CGPoint(x: size.width / 2, y: instructionY - 8)
         instructionBox.addChild(instruction)
         instructionLabel = instruction
         addChild(instructionBox)
@@ -478,10 +494,42 @@ final class GameScene: SKScene {
         )
     }
 
+    private func playSound(named fileName: String) {
+        guard let player = soundPlayers[fileName] else { return }
+        player.currentTime = 0
+        player.play()
+    }
+
+    private func preloadSounds() {
+        guard !hasPreloadedSounds else { return }
+        hasPreloadedSounds = true
+
+        for fileName in ["number-click.wav", "wrong-number.wav", "win.wav"] {
+            let resourceName = (fileName as NSString).deletingPathExtension
+            let fileExtension = (fileName as NSString).pathExtension
+            guard let url = Bundle.main.url(forResource: resourceName, withExtension: fileExtension) else {
+                print("Unable to find sound effect: \(fileName)")
+                continue
+            }
+
+            do {
+                let player = try AVAudioPlayer(contentsOf: url)
+                guard player.prepareToPlay() else {
+                    print("Unable to prepare sound effect: \(fileName)")
+                    continue
+                }
+                soundPlayers[fileName] = player
+            } catch {
+                print("Unable to load sound effect \(fileName): \(error.localizedDescription)")
+            }
+        }
+    }
+
     private func finishGame() {
         isFinished = true
         elapsedTime = ProcessInfo.processInfo.systemUptime - startedAt
         isNewRecord = saveBestTime(elapsedTime, for: selectedDimension)
+        playSound(named: "win.wav")
         onGameCompletionChanged?(true)
         layoutScreen()
     }

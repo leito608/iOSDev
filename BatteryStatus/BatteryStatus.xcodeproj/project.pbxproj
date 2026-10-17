@@ -10,27 +10,8 @@
 		D0173075307F78B100A67FC3 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = D0173074307F78B100A67FC3 /* GoogleMobileAds */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		D0C6235D307F5DEE00601EFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D0C62344307F5DE900601EFC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D0C6234B307F5DE900601EFC;
-			remoteInfo = BatteryStatus;
-		};
-		D0C62367307F5DEF00601EFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D0C62344307F5DE900601EFC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D0C6234B307F5DE900601EFC;
-			remoteInfo = BatteryStatus;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		D0C6234C307F5DE900601EFC /* BatteryStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BatteryStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0C6235C307F5DEE00601EFC /* BatteryStatusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BatteryStatusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0C62366307F5DEE00601EFC /* BatteryStatusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BatteryStatusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -73,20 +54,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D0C62359307F5DEE00601EFC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D0C62363307F5DEE00601EFC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -112,8 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				D0C6234C307F5DE900601EFC /* BatteryStatus.app */,
-				D0C6235C307F5DEE00601EFC /* BatteryStatusTests.xctest */,
-				D0C62366307F5DEE00601EFC /* BatteryStatusUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,52 +109,6 @@
 			productReference = D0C6234C307F5DE900601EFC /* BatteryStatus.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D0C6235B307F5DEE00601EFC /* BatteryStatusTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D0C62373307F5DEF00601EFC /* Build configuration list for PBXNativeTarget "BatteryStatusTests" */;
-			buildPhases = (
-				D0C62358307F5DEE00601EFC /* Sources */,
-				D0C62359307F5DEE00601EFC /* Frameworks */,
-				D0C6235A307F5DEE00601EFC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D0C6235E307F5DEE00601EFC /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				D0C6235F307F5DEE00601EFC /* BatteryStatusTests */,
-			);
-			name = BatteryStatusTests;
-			packageProductDependencies = (
-			);
-			productName = BatteryStatusTests;
-			productReference = D0C6235C307F5DEE00601EFC /* BatteryStatusTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D0C62365307F5DEE00601EFC /* BatteryStatusUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D0C62376307F5DEF00601EFC /* Build configuration list for PBXNativeTarget "BatteryStatusUITests" */;
-			buildPhases = (
-				D0C62362307F5DEE00601EFC /* Sources */,
-				D0C62363307F5DEE00601EFC /* Frameworks */,
-				D0C62364307F5DEE00601EFC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D0C62368307F5DEF00601EFC /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				D0C62369307F5DEF00601EFC /* BatteryStatusUITests */,
-			);
-			name = BatteryStatusUITests;
-			packageProductDependencies = (
-			);
-			productName = BatteryStatusUITests;
-			productReference = D0C62366307F5DEE00601EFC /* BatteryStatusUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,14 +124,6 @@
 				TargetAttributes = {
 					D0C6234B307F5DE900601EFC = {
 						CreatedOnToolsVersion = 16.0;
-					};
-					D0C6235B307F5DEE00601EFC = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = D0C6234B307F5DE900601EFC;
-					};
-					D0C62365307F5DEE00601EFC = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = D0C6234B307F5DE900601EFC;
 					};
 				};
 			};
@@ -234,28 +145,12 @@
 			projectRoot = "";
 			targets = (
 				D0C6234B307F5DE900601EFC /* BatteryStatus */,
-				D0C6235B307F5DEE00601EFC /* BatteryStatusTests */,
-				D0C62365307F5DEE00601EFC /* BatteryStatusUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D0C6234A307F5DE900601EFC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D0C6235A307F5DEE00601EFC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D0C62364307F5DEE00601EFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -272,34 +167,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D0C62358307F5DEE00601EFC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D0C62362307F5DEE00601EFC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D0C6235E307F5DEE00601EFC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D0C6234B307F5DE900601EFC /* BatteryStatus */;
-			targetProxy = D0C6235D307F5DEE00601EFC /* PBXContainerItemProxy */;
-		};
-		D0C62368307F5DEF00601EFC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D0C6234B307F5DE900601EFC /* BatteryStatus */;
-			targetProxy = D0C62367307F5DEF00601EFC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D0C6236E307F5DEF00601EFC /* Debug */ = {
@@ -445,9 +313,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jukchai.batterystatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -475,77 +345,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jukchai.batterystatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		D0C62374307F5DEF00601EFC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = KJ.BatteryStatusTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BatteryStatus.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BatteryStatus";
-			};
-			name = Debug;
-		};
-		D0C62375307F5DEF00601EFC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = KJ.BatteryStatusTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BatteryStatus.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BatteryStatus";
-			};
-			name = Release;
-		};
-		D0C62377307F5DEF00601EFC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = KJ.BatteryStatusUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BatteryStatus;
-			};
-			name = Debug;
-		};
-		D0C62378307F5DEF00601EFC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = KJ.BatteryStatusUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BatteryStatus;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -566,24 +370,6 @@
 			buildConfigurations = (
 				D0C62371307F5DEF00601EFC /* Debug */,
 				D0C62372307F5DEF00601EFC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D0C62373307F5DEF00601EFC /* Build configuration list for PBXNativeTarget "BatteryStatusTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D0C62374307F5DEF00601EFC /* Debug */,
-				D0C62375307F5DEF00601EFC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D0C62376307F5DEF00601EFC /* Build configuration list for PBXNativeTarget "BatteryStatusUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D0C62377307F5DEF00601EFC /* Debug */,
-				D0C62378307F5DEF00601EFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FindNumber.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>11</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>1D008449C4C23433A35AE7BBA5B0FA96EF69BBE3</string>
+				<key>dateExpires</key>
+				<string>15/10/27</string>
+				<key>type</key>
+				<string>Cloud Managed Apple Distribution</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>buildNumber</key>
+					<string>11130</string>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>1D008449C4C23433A35AE7BBA5B0FA96EF69BBE3</string>
+						<key>dateExpires</key>
+						<string>15/10/27</string>
+						<key>type</key>
+						<string>Cloud Managed Apple Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>GoogleMobileAds.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>SG75JWCP84</string>
+						<key>name</key>
+						<string>Jukchai Sengboonleng</string>
+					</dict>
+					<key>versionNumber</key>
+					<string>11.13.0</string>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>buildNumber</key>
+					<string>1</string>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>1D008449C4C23433A35AE7BBA5B0FA96EF69BBE3</string>
+						<key>dateExpires</key>
+						<string>15/10/27</string>
+						<key>type</key>
+						<string>Cloud Managed Apple Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>UserMessagingPlatform.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>SG75JWCP84</string>
+						<key>name</key>
+						<string>Jukchai Sengboonleng</string>
+					</dict>
+					<key>versionNumber</key>
+					<string>2.7.0</string>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>SG75JWCP84.KJ.FindNumber</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>SG75JWCP84</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>FindNumber.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>0fec437b-c7d3-494d-ae9e-526b7f3b5cd9</string>
+				<key>dateExpires</key>
+				<string>15/10/27</string>
+				<key>name</key>
+				<string>iOS Team Ad Hoc Provisioning Profile: KJ.FindNumber</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>SG75JWCP84</string>
+				<key>name</key>
+				<string>Jukchai Sengboonleng</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>1.0</string>
+		</dict>
+	</array>
+</dict>
+</plist>

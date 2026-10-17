@@ -39,7 +39,12 @@ class GameViewController: UIViewController, GADBannerViewDelegate {
         guard bannerView == nil else { return }
 
         let banner = GADBannerView(adSize: GADAdSizeBanner)
-        banner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        //banner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        #if DEBUG
+        banner.adUnitID = "ca-app-pub-3940256099942544/2934735716"   // Google test banner
+        #else
+        banner.adUnitID = "ca-app-pub-8986836930601743/4136449801"
+        #endif
         banner.rootViewController = self
         banner.delegate = self
         banner.translatesAutoresizingMaskIntoConstraints = false
